@@ -8,10 +8,10 @@
 				<h3 class="mb-0">Surveys</h3>
 			</div>
 			<div class="col-6 text-right">
-				{{-- <a href="#" class="btn btn-sm btn-neutral btn-round btn-icon" data-toggle="tooltip" data-original-title="Edit product">
-					<span class="btn-inner--icon"><i class="fas fa-user-edit"></i></span>
-					<span class="btn-inner--text">Export</span>
-				</a> --}}
+				<a href="/generateCsv" class="btn btn-sm btn-neutral btn-round btn-icon" data-toggle="tooltip" data-original-title="Edit product">
+					<span class="btn-inner--icon"><i class="fas fa-file-csv"></i></span>
+					<span class="btn-inner--text">EXPORT CSV</span>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -20,10 +20,8 @@
 			<thead class="thead-light">
 				<tr>
 					<th>S.No</th>
-					<th>Name</th>
-					<th>Phone</th>
-					<th>Email</th>
-					<th>Action</th>
+					<th>Survey UUID</th>
+					{{-- <th>Action</th> --}}
 				</tr>
 			</thead>
 			<tbody>
@@ -31,14 +29,12 @@
 				@foreach($surveys as $survey)
 					<tr>
 						<td>{{$i++}}</td>
-						<td>{{$survey->fname}} {{$survey->lname}}</td>
-						<td>{{$survey->phone}}</td>
-						<td>{{$survey->email}}</td>
-						<td class="table-actions">
+						<td>{{$survey->survey_uuid}}</td>
+						{{-- <td class="table-actions">
 							<a href="{{url('/surveys/'.$survey->id)}}" class="table-action" data-toggle="tooltip" data-original-title="View Survey">
 								<i class="fas fa-eye"></i>
 							</a>
-						</td>
+						</td> --}}
 					</tr>
 				@endforeach
 			</tbody>

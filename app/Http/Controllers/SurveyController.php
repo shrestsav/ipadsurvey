@@ -31,15 +31,48 @@ class SurveyController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'fname'  => 'string',
-            "lname"  => 'string',
-            "phone"  => 'string',
-            "email"  => 'string|email|max:255',
             "survey" => 'required|array'
         ]);
 
-        $input = $request->only('fname','lname','phone','email','survey');
-        $survey = Survey::create($input);
+        $survey_uuid = Str::uuid();
+        $questions   = config('survey.questions');
+        $sections    = config('survey.sections');
+        $answers     = $request->survey;
+
+        if(count($questions) != count($answers)){
+            return response()->json([
+                'status' => '403',
+                'message' => 'Question Answer Array Mismatch Error',
+            ], 403);
+        }
+
+        $survey = Survey::create([
+            'survey_uuid' => $survey_uuid,
+            'survey' => $request->survey
+        ]);
+
+        foreach($answers as $key => $answer){
+            $question = $questions[$key]['q'];
+            $section_group = $questions[$key]['section'];
+            $section  = $sections[$section_group]['title'];
+
+            if($questions[$key]['ans']['type']=='multiple'){
+                $ans = $str = implode (", ", $answer);
+            }
+            else{
+                $ans = $answer;
+            }
+
+            SurveyCsv::create([
+                'survey_uuid'   =>  $survey_uuid,
+                'ipad_udid'     =>  $survey_uuid,
+                'section_group' =>  $section_group,
+                'section'       =>  $section,
+                'question'      =>  $question,
+                'answer'        =>  $ans
+            ]);
+        }
+
         return response()->json([
             'status'  => 200,
             'message' => 'Suvey Stored Successfully'
@@ -82,12 +115,12 @@ class SurveyController extends Controller
         //
     }
 
-    public function test()
+    public function store_csv($answers, $survey_uuid)
     {
-        $survey_uuid = Str::uuid();
         $questions = config('survey.questions');
         $sections  = config('survey.sections');
-        $answers   = json_decode('{"0":1,"1":"yes","2":["hy","hello"],"3":"very Good","4":["testone","testtwo"],"5":"very Good","6":"very Good","7":"very Good"}', true);
+        // $answers   = json_decode('{"0":1,"1":"yes","2":["hy","hello"],"3":"very Good","4":["testone","testtwo"],"5":"very Good","6":"very Good","7":"very Good"}', true);
+        // $answers   = json_decode($jsonSurvey, true);
 
         if(count($questions) != count($answers)){
             return response()->json([
@@ -121,7 +154,7 @@ class SurveyController extends Controller
             //     return $ans;
             // }
         }
-        return $answers;
+        return true;
     }
 
     public function generate_csv()

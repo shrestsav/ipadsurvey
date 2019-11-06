@@ -14,7 +14,9 @@
 
 Auth::routes();
 
-
+Route::get('phpinfo', function () {
+    phpinfo();
+});
 
 Route::middleware(['auth'])->group(function () {
 	Route::group(['prefix' => 'admin', 'middleware' => ['role:superAdmin']], function() {

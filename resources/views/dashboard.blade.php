@@ -8,7 +8,7 @@
 				<h3 class="mb-0">Surveys</h3>
 			</div>
 			<div class="col-6 text-right">
-				<a href="/generateCsv" class="btn btn-sm btn-neutral btn-round btn-icon" data-toggle="tooltip" data-original-title="Edit product">
+				<a href="/generateCsv" class="btn btn-sm btn-neutral btn-round btn-icon">
 					<span class="btn-inner--icon"><i class="fas fa-file-csv"></i></span>
 					<span class="btn-inner--text">EXPORT CSV</span>
 				</a>

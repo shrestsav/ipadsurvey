@@ -223,4 +223,11 @@ class SurveyController extends Controller
 
         return $surveys;
     }
+
+    public function test()
+    {
+        $questions = config('survey.questions');
+        $sections  = config('survey.sections');
+        return $sections;
+    }
 }

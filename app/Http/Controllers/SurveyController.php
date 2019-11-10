@@ -39,39 +39,39 @@ class SurveyController extends Controller
         $sections    = config('survey.sections');
         $answers     = $request->survey;
 
-        if(count($questions) != count($answers)){
-            return response()->json([
-                'status' => '403',
-                'message' => 'Question Answer Array Mismatch Error',
-            ], 403);
-        }
+        // if(count($questions) != count($answers)){
+        //     return response()->json([
+        //         'status' => '403',
+        //         'message' => 'Question Answer Array Mismatch Error',
+        //     ], 403);
+        // }
 
         $survey = Survey::create([
             'survey_uuid' => $survey_uuid,
             'survey' => $request->survey
         ]);
 
-        foreach($answers as $key => $answer){
-            $question = $questions[$key]['q'];
-            $section_group = $questions[$key]['section'];
-            $section  = $sections[$section_group]['title'];
+        // foreach($answers as $key => $answer){
+        //     $question = $questions[$key]['q'];
+        //     $section_group = $questions[$key]['section'];
+        //     $section  = $sections[$section_group]['title'];
 
-            if($questions[$key]['ans']['type']=='multiple'){
-                $ans = $str = implode (", ", $answer);
-            }
-            else{
-                $ans = $answer;
-            }
+        //     if($questions[$key]['ans']['type']=='multiple'){
+        //         $ans = $str = implode (", ", $answer);
+        //     }
+        //     else{
+        //         $ans = $answer;
+        //     }
 
-            SurveyCsv::create([
-                'survey_uuid'   =>  $survey_uuid,
-                'ipad_udid'     =>  $survey_uuid,
-                'section_group' =>  $section_group,
-                'section'       =>  $section,
-                'question'      =>  $question,
-                'answer'        =>  $ans
-            ]);
-        }
+        //     SurveyCsv::create([
+        //         'survey_uuid'   =>  $survey_uuid,
+        //         'ipad_udid'     =>  $survey_uuid,
+        //         'section_group' =>  $section_group,
+        //         'section'       =>  $section,
+        //         'question'      =>  $question,
+        //         'answer'        =>  $ans
+        //     ]);
+        // }
 
         return response()->json([
             'status'  => 200,

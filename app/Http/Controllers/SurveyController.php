@@ -185,7 +185,7 @@ class SurveyController extends Controller
             foreach($section_group as $key => $section){
                 foreach($section as $key => $survey){
                     if($key==0){
-                        fputcsv($out, array('', chr(255) . chr(254) . mb_convert_encoding($survey['section'], 'UTF-16LE', 'UTF-8'), $survey['question'], $survey['answer']));
+                        fputcsv($out, array('', $survey['section'], $survey['question'], $survey['answer']));
                     }
                     else{
                         fputcsv($out, array('', '', $survey['question'], $survey['answer']));

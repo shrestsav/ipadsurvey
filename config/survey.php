@@ -399,20 +399,15 @@ return [
   ),
   2 => 
   array (
-    'title' => 'AI is poised to have significant impact across all sectors and life areas. Where does your government anticipate the greatest impact from AI?',
+    'title' => 'The widespread adoption of AI raises significant regulatory concerns for governments, particularly in scenarios where an AI algorithm is used to inform decisions that have direct or indirect impact on the lives of citizens. The following questions pertain to the ethics of AI.',
   ),
   3 => 
   array (
-    'title' => 'The widespread adoption of AI raises significant regulatory concerns for governments, particularly in scenarios where an AI algorithm is used to inform decisions that have direct or indirect impact on the lives of citizens. The following questions pertain to the ethics of AI.',
-  ),
-  4 => 
-  array (
     'title' => 'Digital Majlis is a gathering of regional and international thought leaders and government officials to discuss the most urgent questions facing government during the 4th Industrial Revolution. ',
   ),
-  5 => 
+  4 => 
   array (
     'title' => 'We hope you’ve enjoyed the first meeting of the Digital Majlis! We will always be striving to improve experiences. Kindly share your feedback on today’s event below.',
   ),
 )
-
 ];

@@ -159,8 +159,7 @@ class SurveyController extends Controller
 
     public function generate_csv()
     {
-        $surveys = SurveyCsv::all()->groupBy(['survey_uuid', 'section_group']);
-
+        $surveys = SurveyCsv::orderBy('id','asc')->get()->groupBy(['survey_uuid', 'section_group']);
         $headers = array(
             "Content-type" => "text/csv",
             "Content-Disposition" => "attachment; filename=file.csv",

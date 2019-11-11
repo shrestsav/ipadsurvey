@@ -2,7 +2,7 @@
   <!-- Brand -->
   <div class="sidenav-header d-flex align-items-center">
     <a class="navbar-brand" href="{{route('dashboard')}}">
-      XISHE - DIGITAL MAJLIS 
+      DIGITAL MAJLIS 
     </a>
     <div class="ml-auto">
       <!-- Sidenav toggler -->

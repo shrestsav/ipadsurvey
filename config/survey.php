@@ -47,26 +47,41 @@ return [
   ),
   1 => 
   array (
-    'q' => 'Is the government taking steps to improve employee preparedness ?',
+    'q' => 'Based on current digital maturity levels, how prepared are government technology service providers to deliver and maintain AI solutions for the government within the next 3 years ? ',
     'ans' => 
     array (
-      'type' => 'single-break',
+      'type' => 'single',
+      'label' => 
+      array (
+        0 => 'Unprepared',
+        1 => 'Very prepared',
+      ),
       'opt' => 
       array (
         0 => 
         array (
-          'key' => 'Yes',
-          'value' => 'Yes: We have (working on) programs in place.',
+          'key' => 1,
+          'value' => 1,
         ),
         1 => 
         array (
-          'key' => 'No',
-          'value' => 'No: We do not have programs in place.',
+          'key' => 2,
+          'value' => 2,
         ),
         2 => 
         array (
-          'key' => 'Unsure',
-          'value' => 'Unsure',
+          'key' => 3,
+          'value' => 3,
+        ),
+        3 => 
+        array (
+          'key' => 4,
+          'value' => 4,
+        ),
+        4 => 
+        array (
+          'key' => 5,
+          'value' => 5,
         ),
       ),
     ),
@@ -75,7 +90,7 @@ return [
   ),
   2 => 
   array (
-    'q' => 'Based on current digital maturity levels, how prepared are government technology service providers to deliver and maintain AI solutions for the government within the next 3 years ? ',
+    'q' => 'How prepared are government legislatures to effectively regulate AI use by government and in the private sector within the next 3 years?',
     'ans' => 
     array (
       'type' => 'single',
@@ -117,105 +132,6 @@ return [
     'alphaKey' => 'c',
   ),
   3 => 
-  array (
-    'q' => 'Is the government taking steps to improve government technology preparedness ?',
-    'ans' => 
-    array (
-      'type' => 'single-break',
-      'opt' => 
-      array (
-        0 => 
-        array (
-          'key' => 'Yes',
-          'value' => 'Yes: We have (working on) programs in place.',
-        ),
-        1 => 
-        array (
-          'key' => 'No',
-          'value' => 'No: We do not have programs in place.',
-        ),
-        2 => 
-        array (
-          'key' => 'Unsure',
-          'value' => 'Unsure',
-        ),
-      ),
-    ),
-    'section' => 0,
-    'alphaKey' => 'd',
-  ),
-  4 => 
-  array (
-    'q' => 'How prepared are government legislatures to effectively regulate AI use by government and in the private sector within the next 3 years?',
-    'ans' => 
-    array (
-      'type' => 'single',
-      'label' => 
-      array (
-        0 => 'Unprepared',
-        1 => 'Very prepared',
-      ),
-      'opt' => 
-      array (
-        0 => 
-        array (
-          'key' => 1,
-          'value' => 1,
-        ),
-        1 => 
-        array (
-          'key' => 2,
-          'value' => 2,
-        ),
-        2 => 
-        array (
-          'key' => 3,
-          'value' => 3,
-        ),
-        3 => 
-        array (
-          'key' => 4,
-          'value' => 4,
-        ),
-        4 => 
-        array (
-          'key' => 5,
-          'value' => 5,
-        ),
-      ),
-    ),
-    'section' => 0,
-    'alphaKey' => 'e',
-  ),
-  5 => 
-  array (
-    'q' => 'Is the government taking steps to improve regulatory preparedness ?',
-    'ans' => 
-    array (
-      'type' => 'single-break',
-      'opt' => 
-      array (
-        0 => 
-        array (
-          'key' => 'Yes',
-          'value' => 'Yes: We have (working on) programs in place.',
-        ),
-        1 => 
-        array (
-          'key' => 'No',
-          'value' => 'No: We do not have programs in place.',
-        ),
-        2 => 
-        array (
-          'key' => 'Unsure',
-          'value' => 'Unsure',
-        ),
-      ),
-    ),
-    'section' => 0,
-    'alphaKey' => 'f',
-  ),
-  6 => 
   array (
     'q' => 'How effective is your government K-12 curriculum at developing foundational literacies (literacy, numeracy, scientific literacy, ICT literacy, financial literacy, cultural and civil literacy)',
     'ans' => 
@@ -258,35 +174,7 @@ return [
     'section' => 1,
     'alphaKey' => 'a',
   ),
-  7 => 
-  array (
-    'q' => 'Is the government taking steps to improve foundational literacy training ?',
-    'ans' => 
-    array (
-      'type' => 'single-break',
-      'opt' => 
-      array (
-        0 => 
-        array (
-          'key' => 'Yes',
-          'value' => 'Yes: We have (working on) programs in place.',
-        ),
-        1 => 
-        array (
-          'key' => 'No',
-          'value' => 'No: We do not have programs in place.',
-        ),
-        2 => 
-        array (
-          'key' => 'Unsure',
-          'value' => 'Unsure',
-        ),
-      ),
-    ),
-    'section' => 1,
-    'alphaKey' => 'b',
-  ),
-  8 => 
+  4 => 
   array (
     'q' => 'How effective is your government K-12 curriculum at developing core competencies (critical thinking & problem solving, creativity, communication, collaboration)',
     'ans' => 
@@ -327,37 +215,9 @@ return [
       ),
     ),
     'section' => 1,
-    'alphaKey' => 'c',
+    'alphaKey' => 'b',
   ),
-  9 => 
-  array (
-    'q' => 'Is the government taking steps to improve core competency  training ?',
-    'ans' => 
-    array (
-      'type' => 'single-break',
-      'opt' => 
-      array (
-        0 => 
-        array (
-          'key' => 'Yes',
-          'value' => 'Yes: We have (working on) programs in place.',
-        ),
-        1 => 
-        array (
-          'key' => 'No',
-          'value' => 'No: We do not have programs in place.',
-        ),
-        2 => 
-        array (
-          'key' => 'Unsure',
-          'value' => 'Unsure',
-        ),
-      ),
-    ),
-    'section' => 1,
-    'alphaKey' => 'd',
-  ),
-  10 => 
+  5 => 
   array (
     'q' => 'How effective is your government K-12 curriculum at developing character qualities (curiosity, initiative, persistence/grit, adaptability, leadership, social & cultural awareness)',
     'ans' => 
@@ -398,327 +258,9 @@ return [
       ),
     ),
     'section' => 1,
-    'alphaKey' => 'e',
-  ),
-  11 => 
-  array (
-    'q' => 'Is the government taking steps to improve character qualities training ?',
-    'ans' => 
-    array (
-      'type' => 'single-break',
-      'opt' => 
-      array (
-        0 => 
-        array (
-          'key' => 'Yes',
-          'value' => 'Yes: We have (working on) programs in place.',
-        ),
-        1 => 
-        array (
-          'key' => 'No',
-          'value' => 'No: We do not have programs in place.',
-        ),
-        2 => 
-        array (
-          'key' => 'Unsure',
-          'value' => 'Unsure',
-        ),
-      ),
-    ),
-    'section' => 1,
-    'alphaKey' => 'f',
-  ),
-  12 => 
-  array (
-    'q' => 'Indicate the sectors most likely to experience a net positive impact from AI. (Choose all that apply.)',
-    'ans' => 
-    array (
-      'type' => 'multipleWithOtherOpt',
-      'opt' => 
-      array (
-        0 => 
-        array (
-          'key' => 'Agriculture',
-          'value' => 'Agriculture',
-        ),
-        1 => 
-        array (
-          'key' => 'Art and Design',
-          'value' => 'Art and Design',
-        ),
-        2 => 
-        array (
-          'key' => 'Automotive and Transportation',
-          'value' => 'Automotive and Transportation',
-        ),
-        3 => 
-        array (
-          'key' => 'Aviation and Space',
-          'value' => 'Aviation and Space',
-        ),
-        4 => 
-        array (
-          'key' => 'Chemistry',
-          'value' => 'Chemistry',
-        ),
-        5 => 
-        array (
-          'key' => 'Construction',
-          'value' => 'Construction',
-        ),
-        6 => 
-        array (
-          'key' => 'Education',
-          'value' => 'Education',
-        ),
-        7 => 
-        array (
-          'key' => 'Energy, Oil and Gas',
-          'value' => 'Energy, Oil and Gas',
-        ),
-        8 => 
-        array (
-          'key' => 'Finance and Insurance',
-          'value' => 'Finance and Insurance',
-        ),
-        9 => 
-        array (
-          'key' => 'Government',
-          'value' => 'Government',
-        ),
-        10 => 
-        array (
-          'key' => 'Healthcare',
-          'value' => 'Healthcare',
-        ),
-        11 => 
-        array (
-          'key' => 'Hospitality',
-          'value' => 'Hospitality',
-        ),
-        12 => 
-        array (
-          'key' => 'ICT',
-          'value' => 'ICT',
-        ),
-        13 => 
-        array (
-          'key' => 'Manufacturing',
-          'value' => 'Manufacturing',
-        ),
-        14 => 
-        array (
-          'key' => 'Logistics and Supply Chain',
-          'value' => 'Logistics and Supply Chain',
-        ),
-        15 => 
-        array (
-          'key' => 'Real Estate',
-          'value' => 'Real Estate',
-        ),
-        16 => 
-        array (
-          'key' => 'Tourism',
-          'value' => 'Tourism',
-        ),
-        17 => 
-        array (
-          'key' => 'others',
-          'value' => '',
-        ),
-      ),
-    ),
-    'section' => 2,
-    'alphaKey' => 'a',
-  ),
-  13 => 
-  array (
-    'q' => 'Is your government taking steps to amplify positive impact?',
-    'ans' => 
-    array (
-      'type' => 'single-break',
-      'opt' => 
-      array (
-        0 => 
-        array (
-          'key' => 'Yes',
-          'value' => 'Yes: We have (working on) programs in place.',
-        ),
-        1 => 
-        array (
-          'key' => 'No',
-          'value' => 'No: We do not have programs in place.',
-        ),
-        2 => 
-        array (
-          'key' => 'Unsure',
-          'value' => 'Unsure',
-        ),
-      ),
-    ),
-    'section' => 2,
-    'alphaKey' => 'b',
-  ),
-  14 => 
-  array (
-    'q' => 'Not all AI impacts are positive. Please indicate the sectors most likely to see a net negative impact from AI. (Choose all that apply.)',
-    'ans' => 
-    array (
-      'type' => 'multipleWithOtherOpt',
-      'opt' => 
-      array (
-        0 => 
-        array (
-          'key' => 'Agriculture',
-          'value' => 'Agriculture',
-        ),
-        1 => 
-        array (
-          'key' => 'Art and Design',
-          'value' => 'Art and Design',
-        ),
-        2 => 
-        array (
-          'key' => 'Automotive and Transportation',
-          'value' => 'Automotive and Transportation',
-        ),
-        3 => 
-        array (
-          'key' => 'Aviation and Space',
-          'value' => 'Aviation and Space',
-        ),
-        4 => 
-        array (
-          'key' => 'Chemistry',
-          'value' => 'Chemistry',
-        ),
-        5 => 
-        array (
-          'key' => 'Construction',
-          'value' => 'Construction',
-        ),
-        6 => 
-        array (
-          'key' => 'Education',
-          'value' => 'Education',
-        ),
-        7 => 
-        array (
-          'key' => 'Energy, Oil and Gas',
-          'value' => 'Energy, Oil and Gas',
-        ),
-        8 => 
-        array (
-          'key' => 'Finance and Insurance',
-          'value' => 'Finance and Insurance',
-        ),
-        9 => 
-        array (
-          'key' => 'Government',
-          'value' => 'Government',
-        ),
-        10 => 
-        array (
-          'key' => 'Healthcare',
-          'value' => 'Healthcare',
-        ),
-        11 => 
-        array (
-          'key' => 'Hospitality',
-          'value' => 'Hospitality',
-        ),
-        12 => 
-        array (
-          'key' => 'ICT',
-          'value' => 'ICT',
-        ),
-        13 => 
-        array (
-          'key' => 'Manufacturing',
-          'value' => 'Manufacturing',
-        ),
-        14 => 
-        array (
-          'key' => 'Logistics and Supply Chain',
-          'value' => 'Logistics and Supply Chain',
-        ),
-        15 => 
-        array (
-          'key' => 'Real Estate',
-          'value' => 'Real Estate',
-        ),
-        16 => 
-        array (
-          'key' => 'Tourism',
-          'value' => 'Tourism',
-        ),
-        17 => 
-        array (
-          'key' => 'others',
-          'value' => '',
-        ),
-      ),
-    ),
-    'section' => 2,
     'alphaKey' => 'c',
   ),
-  15 => 
-  array (
-    'q' => 'Is your government taking steps to mitigate potential negative impact from AI?',
-    'ans' => 
-    array (
-      'type' => 'single-break',
-      'opt' => 
-      array (
-        0 => 
-        array (
-          'key' => 'Yes',
-          'value' => 'Yes: We have (working on) programs in place.',
-        ),
-        1 => 
-        array (
-          'key' => 'No',
-          'value' => 'No: We do not have programs in place.',
-        ),
-        2 => 
-        array (
-          'key' => 'Unsure',
-          'value' => 'Unsure',
-        ),
-      ),
-    ),
-    'section' => 2,
-    'alphaKey' => 'd',
-  ),
-  16 => 
-  array (
-    'q' => 'Does your country have a stated policy or approach to AI ethics?',
-    'ans' => 
-    array (
-      'type' => 'single-break',
-      'opt' => 
-      array (
-        0 => 
-        array (
-          'key' => 'Yes',
-          'value' => 'Yes: We have (working on) an AI ethics policy.',
-        ),
-        1 => 
-        array (
-          'key' => 'No',
-          'value' => 'No: We do not have an AI ethics policy.',
-        ),
-        2 => 
-        array (
-          'key' => 'Unsure',
-          'value' => 'Unsure',
-        ),
-      ),
-    ),
-    'section' => 3,
-    'alphaKey' => 'a',
-  ),
-  17 => 
+  6 => 
   array (
     'q' => 'Do you believe there is a need for a Universal AI Ethics code?',
     'ans' => 
@@ -743,10 +285,10 @@ return [
         ),
       ),
     ),
-    'section' => 3,
-    'alphaKey' => 'b',
+    'section' => 2,
+    'alphaKey' => 'a',
   ),
-  18 => 
+  7 => 
   array (
     'q' => 'Which of the following characteristics should be included in a Universal AI Ethics code? (Choose all that apply.)',
     'ans' => 
@@ -781,10 +323,10 @@ return [
         ),
       ),
     ),
-    'section' => 3,
-    'alphaKey' => 'c',
+    'section' => 2,
+    'alphaKey' => 'b',
   ),
-  19 => 
+  8 => 
   array (
     'q' => 'What topic would you be most interested in discussing next?',
     'ans' => 
@@ -799,10 +341,10 @@ return [
         ),
       ),
     ),
-    'section' => 4,
+    'section' => 3,
     'alphaKey' => 'a',
   ),
-  20 => 
+  9 => 
   array (
     'q' => 'How was your overall experience?',
     'ans' => 
@@ -842,140 +384,10 @@ return [
         ),
       ),
     ),
-    'section' => 5,
+    'section' => 4,
     'alphaKey' => 'a',
   ),
-  21 => 
-  array (
-    'q' => 'How would you rate today\'s venue?',
-    'ans' => 
-    array (
-      'type' => 'rating',
-      'label' => 
-      array (
-        0 => 'Below expectations',
-        1 => 'Exceeded expectations',
-      ),
-      'opt' => 
-      array (
-        0 => 
-        array (
-          'key' => 1,
-          'value' => 1,
-        ),
-        1 => 
-        array (
-          'key' => 2,
-          'value' => 2,
-        ),
-        2 => 
-        array (
-          'key' => 3,
-          'value' => 3,
-        ),
-        3 => 
-        array (
-          'key' => 4,
-          'value' => 4,
-        ),
-        4 => 
-        array (
-          'key' => 5,
-          'value' => 5,
-        ),
-      ),
-    ),
-    'section' => 5,
-    'alphaKey' => 'b',
-  ),
-  22 => 
-  array (
-    'q' => 'How engaging was today\'s conversation?',
-    'ans' => 
-    array (
-      'type' => 'rating',
-      'label' => 
-      array (
-        0 => 'Below expectations',
-        1 => 'Exceeded expectations',
-      ),
-      'opt' => 
-      array (
-        0 => 
-        array (
-          'key' => 1,
-          'value' => 1,
-        ),
-        1 => 
-        array (
-          'key' => 2,
-          'value' => 2,
-        ),
-        2 => 
-        array (
-          'key' => 3,
-          'value' => 3,
-        ),
-        3 => 
-        array (
-          'key' => 4,
-          'value' => 4,
-        ),
-        4 => 
-        array (
-          'key' => 5,
-          'value' => 5,
-        ),
-      ),
-    ),
-    'section' => 5,
-    'alphaKey' => 'c',
-  ),
-  23 => 
-  array (
-    'q' => 'How would you rate today\'s moderator?',
-    'ans' => 
-    array (
-      'type' => 'rating',
-      'label' => 
-      array (
-        0 => 'Below expectations',
-        1 => 'Exceeded expectations',
-      ),
-      'opt' => 
-      array (
-        0 => 
-        array (
-          'key' => 1,
-          'value' => 1,
-        ),
-        1 => 
-        array (
-          'key' => 2,
-          'value' => 2,
-        ),
-        2 => 
-        array (
-          'key' => 3,
-          'value' => 3,
-        ),
-        3 => 
-        array (
-          'key' => 4,
-          'value' => 4,
-        ),
-        4 => 
-        array (
-          'key' => 5,
-          'value' => 5,
-        ),
-      ),
-    ),
-    'section' => 5,
-    'alphaKey' => 'd',
-  ),
 ),
-
     'sections' => array (
   0 => 
   array (
@@ -999,7 +411,7 @@ return [
   ),
   5 => 
   array (
-    'title' => 'We hope you\'ve enjoyed the first meeting of the Digital Majlis! We will always be striving to improve experiences. Kindly share your feedback on today\'s event below.',
+    'title' => 'We hope you’ve enjoyed the first meeting of the Digital Majlis! We will always be striving to improve experiences. Kindly share your feedback on today’s event below.',
   ),
 )
 

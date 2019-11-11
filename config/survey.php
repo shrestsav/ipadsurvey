@@ -847,7 +847,7 @@ return [
   ),
   21 => 
   array (
-    'q' => 'How would you rate today’s venue?',
+    'q' => 'How would you rate today\'s venue?',
     'ans' => 
     array (
       'type' => 'rating',
@@ -890,7 +890,7 @@ return [
   ),
   22 => 
   array (
-    'q' => 'How engaging was today’s conversation?',
+    'q' => 'How engaging was today\'s conversation?',
     'ans' => 
     array (
       'type' => 'rating',
@@ -933,7 +933,7 @@ return [
   ),
   23 => 
   array (
-    'q' => 'How would you rate today’s moderator?',
+    'q' => 'How would you rate today\'s moderator?',
     'ans' => 
     array (
       'type' => 'rating',
@@ -999,7 +999,7 @@ return [
   ),
   5 => 
   array (
-    'title' => 'We hope you’ve enjoyed the first meeting of the Digital Majlis! We will always be striving to improve experiences. Kindly share your feedback on today’s event below.',
+    'title' => 'We hope you\'ve enjoyed the first meeting of the Digital Majlis! We will always be striving to improve experiences. Kindly share your feedback on today\'s event below.',
   ),
 )
 

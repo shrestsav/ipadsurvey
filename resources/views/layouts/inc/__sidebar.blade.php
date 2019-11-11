@@ -2,7 +2,7 @@
   <!-- Brand -->
   <div class="sidenav-header d-flex align-items-center">
     <a class="navbar-brand" href="{{route('dashboard')}}">
-      <img src="{{asset('argon')}}/img/brand/blue.png" class="navbar-brand-img" alt="...">
+      XISHE
     </a>
     <div class="ml-auto">
       <!-- Sidenav toggler -->

@@ -34,43 +34,47 @@ class SurveyController extends Controller
             "survey" => 'required|array'
         ]);
 
-        $survey_uuid = Str::uuid();
-        $questions   = config('survey.questions');
-        $sections    = config('survey.sections');
-        $answers     = $request->survey;
+        $surveys = $request->survey;
 
-        if(count($questions) != count($answers)){
-            return response()->json([
-                'status' => '403',
-                'message' => 'Question Answer Array Mismatch Error',
-            ], 403);
-        }
+        foreach($surveys as $survey_data){
+            $survey_uuid = Str::uuid();
+            $questions   = config('survey.questions');
+            $sections    = config('survey.sections');
+            $answers     = $survey_data;
 
-        $survey = Survey::create([
-            'survey_uuid' => $survey_uuid,
-            'survey' => $request->survey
-        ]);
+            $survey = Survey::create([
+                'survey_uuid' => $survey_uuid,
+                'survey'      => $survey_data
+            ]);
 
-        foreach($answers as $key => $answer){
-            $question = $questions[$key]['q'];
-            $section_group = $questions[$key]['section'];
-            $section  = $sections[$section_group]['title'];
-
-            if($questions[$key]['ans']['type']=='multiple' || $questions[$key]['ans']['type']=='multipleWithOtherOpt'){
-                $ans = $str = implode (", ", $answer);
+            if(count($questions) != count($answers)){
+                $err_survey = Survey::find($survey->id);
+                $err_survey->update(['error'=> 1]);
             }
             else{
-                $ans = $answer;
-            }
+                foreach($answers as $key => $answer){
+                    $question = $questions[$key]['q'];
+                    $section_group = $questions[$key]['section'];
+                    $section  = $sections[$section_group]['title'];
 
-            SurveyCsv::create([
-                'survey_uuid'   =>  $survey_uuid,
-                'ipad_udid'     =>  $survey_uuid,
-                'section_group' =>  $section_group,
-                'section'       =>  $section,
-                'question'      =>  $question,
-                'answer'        =>  $ans
-            ]);
+                    if($questions[$key]['ans']['type']=='multiple' || $questions[$key]['ans']['type']=='multipleWithOtherOpt'){
+                        $ans = $str = implode (", ", $answer);
+                    }
+                    else{
+                        $ans = $answer;
+                    }
+
+                    SurveyCsv::create([
+                        'survey_uuid'   =>  $survey_uuid,
+                        'ipad_udid'     =>  $survey_uuid,
+                        'section_group' =>  $section_group,
+                        'section'       =>  $section,
+                        'question'      =>  $question,
+                        'answer'        =>  $ans
+                    ]);
+                }
+            }   
+            
         }
 
         return response()->json([

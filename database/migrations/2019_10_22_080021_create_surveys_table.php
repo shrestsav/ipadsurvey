@@ -17,6 +17,7 @@ class CreateSurveysTable extends Migration
             $table->bigIncrements('id');
             $table->string('survey_uuid')->nullable();
             $table->longText('survey')->nullable();
+            $table->smallInteger('error')->nullable();
             $table->timestamps();
         });
     }

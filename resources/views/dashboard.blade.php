@@ -21,15 +21,19 @@
 				<tr>
 					<th>S.No</th>
 					<th>Survey UUID</th>
-					{{-- <th>Action</th> --}}
+					<th>Submitted at</th>
 				</tr>
 			</thead>
 			<tbody>
 				@php $i=1; @endphp
 				@foreach($surveys as $survey)
+					@php 
+						$dt = \Carbon\Carbon::parse($survey->created_at)->timezone('Asia/Dubai')->format('d-M-Y G:i A');
+					@endphp
 					<tr>
 						<td>{{$i++}}</td>
 						<td>{{$survey->survey_uuid}}</td>
+						<td>{{$dt}}</td>
 						{{-- <td class="table-actions">
 							<a href="{{url('/surveys/'.$survey->id)}}" class="table-action" data-toggle="tooltip" data-original-title="View Survey">
 								<i class="fas fa-eye"></i>

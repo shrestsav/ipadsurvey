@@ -18,7 +18,7 @@ class SurveyController extends Controller
      */
     public function index()
     {
-        $surveys = Survey::paginate(10);
+        $surveys = Survey::paginate(50);
         return view('dashboard',compact('surveys'));
     }
 

@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 Route::apiResource('/surveys','SurveyController');
+Route::get('/test','SurveyController@test');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

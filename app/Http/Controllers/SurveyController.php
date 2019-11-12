@@ -234,6 +234,7 @@ class SurveyController extends Controller
 
     public function test()
     {
+        return 'this is test route';
         $questions = config('survey.questions');
         $sections  = config('survey.sections');
         $likita = '{"0":5,"1":null,"2":null,"3":null,"4":null,"5":null,"6":5,"7":null,"8":5,"9":"No","10":5,"11":null,"12":{"Agriculture":"Agriculture","ArtandDesign":"Art and Design"},"13":["Transparency","Accountability","Privacy"],"14":4,"15":5,"16":"Blockchain & Digital Currency","17":"Bjik"}';

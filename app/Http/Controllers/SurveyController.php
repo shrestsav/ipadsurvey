@@ -30,6 +30,7 @@ class SurveyController extends Controller
      */
     public function store(Request $request)
     {
+        return "here";
         $validatedData = $request->validate([
             "survey" => 'required|array'
         ]);
@@ -185,7 +186,6 @@ class SurveyController extends Controller
         fputcsv($out, $columns);
 
         foreach($surveys as $survey_uuid => $section_group){
-
 
             $submittedTime = \Carbon\Carbon::parse($section_group[0][0]['created_at'])->timezone('Asia/Dubai')->format('d-M-Y h:i A');
             // return $submittedTime;

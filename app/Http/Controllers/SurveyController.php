@@ -66,7 +66,7 @@ class SurveyController extends Controller
 
                     SurveyCsv::create([
                         'survey_uuid'   =>  $survey_uuid,
-                        'ipad_udid'     =>  $survey_uuid,
+                        'ipad_udid'     =>  $request->device_id,
                         'section_group' =>  $section_group,
                         'section'       =>  $section,
                         'question'      =>  $question,

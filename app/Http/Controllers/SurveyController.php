@@ -164,6 +164,7 @@ class SurveyController extends Controller
     public function generate_csv()
     {
         $surveys = SurveyCsv::orderBy('id','asc')->get()->groupBy(['survey_uuid', 'section_group']);
+
         $headers = array(
             "Content-type" => "text/csv",
             "Content-Disposition" => "attachment; filename=file.csv",
@@ -173,7 +174,7 @@ class SurveyController extends Controller
         );
 
         $columns = [
-            'SURVEY ID',
+            'SUBMITTED TIME',
             'SECTION',
             'QUESTION',
             'ANSWER'
@@ -184,7 +185,10 @@ class SurveyController extends Controller
         fputcsv($out, $columns);
 
         foreach($surveys as $survey_uuid => $section_group){
-            fputcsv($out, array($survey_uuid, '', '', ''));
+
+            $submittedTime = \Carbon\Carbon::parse($section_group[0][0]['created_at'])->timezone('Asia/Dubai')->format('d-M-Y G:i A');
+
+            fputcsv($out, array($submittedTime, '', '', ''));
             foreach($section_group as $key => $section){
                 foreach($section as $key => $survey){
                     if($key==0){

@@ -186,8 +186,8 @@ class SurveyController extends Controller
 
         foreach($surveys as $survey_uuid => $section_group){
 
-            $submittedTime = \Carbon\Carbon::parse($section_group[0][0]['created_at'])->timezone('Asia/Dubai')->format('d-M-Y G:i A');
-
+            $submittedTime = \Carbon\Carbon::parse($section_group[0][0]['created_at'])->timezone('Asia/Dubai')->format('d-M-Y g:i A');
+            return $submittedTime;
             fputcsv($out, array($submittedTime, '', '', ''));
             foreach($section_group as $key => $section){
                 foreach($section as $key => $survey){
